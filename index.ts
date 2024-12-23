@@ -12,6 +12,7 @@ const app = express();
 app.use(json());
 app.use(cors());
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', userRouter);
 
